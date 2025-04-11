@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profesionāla veļas mašīna LN-22 TP2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="veikals.css">
+    <link rel="stylesheet" href="image-zoom.css">
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navdiv">
+                <div class="logo"><a href="veikals.html"><img src="https://lh3.googleusercontent.com/pw/AP1GczOG9amC9KS18VEbiSI3kmq3RaCJKXtMum7UFeQ-yJy0NbS0t0uwShhSjGc-Qp6Ott6J1J9mvFC7kBh7w0YAQCZ8YxdFKgN7P7pGwTjPqH5di8eTcQU=w2400" alt="Veļas Māja Logo"></a></div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="primary_nav" id="primary-nav">
+                    <li><a href="veikals.html">Sākums</a></li>
+                    <li class="dropdown" id="catalog-dropdown">
+                        <a href="katalogs.html">Katalogs</a>
+                        <div class="dropdown-content">
+                            <a href="virtuve.html">Profesionālas virtuves iekārtas</a>
+                            <a href="vela.html">Profesionālas veļas mazgāšanas iekārtas</a>
+                            <a href="tirisana.html">Tīrīšanas līdzekļi</a>
+                        </div>
+                    </li>
+                    <li><a href="#kontakti">Kontakti</a></li>
+                </ul>
+                
+                <div class="language_switch">
+                    <a href="/home/set_lang/lv"><span class="lang-button">LV</span></a>
+                    <a href="/home/set_lang/eng"><span class="lang-button">EN</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="product-container">
+        <h1 class="product-title">Profesionāla veļas mašīna LN-22 TP2</h1>
+        
+        <div class="product-details">
+            <div class="product-image">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNAF02q5_oPip6A78YkPjB_LkIYSKcDI7f120xWvnVzBSp_yXt2oCwWgaNwClGF5Fgx5_CmRmL8fJuxrbles4dgsu318tM5HiSsRLLA_6SLnRQAxtM=w2400" 
+                     alt="Profesionāla veļas mašīna LN-22 TP2"
+                     width="400" height="300">
+            </div>
+            <div class="product-info">
+                <ul class="product-features">
+                    <li><strong>Ietilpība:</strong> 22 kg</li>
+                    <li><strong>Centrifūgas ātrums:</strong> 714 apgr./min.</li>
+                    <li><strong>G-faktors:</strong> 200</li>
+                </ul>
+                <p class="product-description">Industriāla veļas mašīna ar milzīgu ietilpību un augstu uzticamību. Perfekts risinājums smagiem un biežiem mazgāšanas uzdevumiem.</p>
+                <div class="product-actions">
+                    <button class="request-price-button">Pieprasīt cenu</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Form Section -->
+        <div class="contact-section">
+            <h2 class="section-title">Sazinieties ar mums</h2>
+            <p class="contact-description">Ja jūs interesē šis produkts vai jums ir jautājumi, lūdzu, aizpildiet zemāk esošo formu.</p>
+            
+            <form action="mailto:miksrudolfsbondars@gmail.com" method="post" enctype="text/plain" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Vārds:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-pasts:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Tālrunis:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <!-- Selected Product Section (Hidden by default) -->
+                <div class="form-group selected-product-container" id="selected-product-container" style="display: none;">
+                    <label>Izvēlētais produkts:</label>
+                    <div class="selected-product" id="selected-product">
+                        <!-- Product details will be inserted here by JavaScript -->
+                    </div>
+                    <input type="hidden" id="product-name" name="product-name" value="">
+                    <input type="hidden" id="product-image" name="product-image" value="">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ziņa:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Nosūtīt" class="orange-button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Starts -->
+    <footer id="kontakti">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Par mums</h3>
+                <p class="footer-text"><span class="brand-name">Virtuve n' Veļa</span> ir jauns un enerģētisks uzņēmums ar misiju nodrošināt kvalitatīvākās iekārtas un labāko servisu mūsu klientiem. Mūsu piedāvājumā ir profesionālās veļas mašīnas, žāvētāji un gludināmie dēļi.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Kontakti</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Adrese: Tallinas iela 85, LV-1009, Rīga, Latvija
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> Tālrunis: +371 27797629
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> E-pasts: info@velasmaja.lv
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Sociālie mediji</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Virtuve n' Veļa | Visas tiesības aizsargātas</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- Add Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="veikals.js"></script>
+    <script src="product-scripts.js"></script>
+    <script src="image-zoom.js"></script>
+</body>
+</html>
