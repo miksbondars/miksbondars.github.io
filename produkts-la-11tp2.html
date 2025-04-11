@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Virtuve n' Veļa - Profesionāla veļas mašīna LA-11 TP2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="veikals.css">
+    <style>
+        /* Product page specific styles */
+        .product-detail-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .product-detail-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        .product-detail-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-detail-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .product-detail-content {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .product-gallery {
+            flex: 0 0 50%;
+            position: relative;
+        }
+
+        .main-product-image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+
+        .product-thumbnail {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product-thumbnail.active {
+            border-color: var(--orange);
+        }
+
+        .product-specs {
+            flex: 1;
+        }
+
+        .product-price-request {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .product-description {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .product-features-list {
+            margin-bottom: 30px;
+        }
+
+        .product-features-list h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .product-features-list ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .product-features-list li {
+            margin-bottom: 10px;
+            display: list-item;
+            color: #555;
+        }
+
+        .specifications-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .specifications-table th {
+            text-align: left;
+            background-color: #f5f5f5;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .specifications-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .specifications-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .back-to-catalog {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        .back-to-catalog:before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-content {
+                flex-direction: column;
+            }
+
+            .product-gallery {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navdiv">
+                <div class="logo"><a href="veikals.html"><img src="https://lh3.googleusercontent.com/pw/AP1GczOG9amC9KS18VEbiSI3kmq3RaCJKXtMum7UFeQ-yJy0NbS0t0uwShhSjGc-Qp6Ott6J1J9mvFC7kBh7w0YAQCZ8YxdFKgN7P7pGwTjPqH5di8eTcQU=w2400" alt="Virtuve n' Veļa Logo"></a></div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="primary_nav" id="primary-nav">
+                    <li><a href="veikals.html">Sākums</a></li>
+                    <li class="dropdown" id="catalog-dropdown">
+                        <a href="katalogs.html">Katalogs</a>
+                        <div class="dropdown-content">
+                            <a href="virtuve.html">Profesionālas virtuves iekārtas</a>
+                            <a href="vela.html">Profesionālas veļas mazgāšanas iekārtas</a>
+                            <a href="tirisana.html">Tīrīšanas līdzekļi</a>
+                        </div>
+                    </li>
+                    <li><a href="#kontakti">Kontakti</a></li>
+                </ul>
+                
+                <div class="language_switch">
+                    <a href="/home/set_lang/lv"><span class="lang-button">LV</span></a>
+                    <a href="/home/set_lang/eng"><span class="lang-button">EN</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="product-detail-container">
+        <a href="vela.html" class="back-to-catalog">Atpakaļ uz katalogu</a>
+        
+        <div class="product-detail-header">
+            <h1 class="product-detail-title">Profesionāla veļas mašīna LA-11 TP2</h1>
+            <p class="product-detail-subtitle">Augstas kvalitātes veļas mazgāšanas risinājums profesionāļiem</p>
+        </div>
+        
+        <div class="product-detail-content">
+            <div class="product-gallery">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOnvgrwaR0CPtahbAJx2bEutsDdZtSMm9x325AKcm0WBJsT57tSlz2cPtJIRs0Prum_JOxpn_Nu4KGcZsCzXuvqZbMKoseDaQ1hzmk2K91WeCY-GF4=w2400" alt="Profesionāla veļas mašīna LA-11 TP2" class="main-product-image" id="main-product-image">
+                
+                <div class="product-thumbnails">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOnvgrwaR0CPtahbAJx2bEutsDdZtSMm9x325AKcm0WBJsT57tSlz2cPtJIRs0Prum_JOxpn_Nu4KGcZsCzXuvqZbMKoseDaQ1hzmk2K91WeCY-GF4=w2400" alt="Profesionāla veļas mašīna LA-11 TP2 - Priekšskats" class="product-thumbnail active" onclick="changeImage(this.src)">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO5aBw5zPE4TiRc0thFWJNtducij3tlcWyAouWcA-vj_pAb3AcUxJcpcynQh8a-uGOgHdlRI-D-CRizQlx2hTw9OYg3ZRrJRHaP2h9OzNhimyY5Tus=w2400" alt="Profesionāla veļas mašīna LA-11 TP2 - Sānskats" class="product-thumbnail" onclick="changeImage(this.src)">
+                </div>
+            </div>
+            
+            <div class="product-specs">
+                <div class="product-price-request">
+                    <button class="request-price-button" id="product-inquiry-btn">Pieprasīt cenu</button>
+                </div>
+                
+                <div class="product-description">
+                    <p>LA-11 TP2 ir profesionāla veļas mazgājamā mašīna ar 11 kg ietilpību, kas ir īpaši izstrādāta intensīvai lietošanai viesnīcās, veļas mazgātavās, slimnīcās un citās iestādēs. Tās augstās veiktspējas motors un izturīgā konstrukcija nodrošina ilgstošu darbmūžu pat visintensīvākajās darba vidēs.</p>
+                    <p>Mūsdienīgā vadības sistēma ļauj pielāgot mazgāšanas programmas atbilstoši jūsu vajadzībām, nodrošinot optimālu mazgāšanas rezultātu dažādiem audumu veidiem un netīrības pakāpēm. Mašīna ir aprīkota ar energotaupības funkcijām, kas palīdz samazināt ūdens un elektrības patēriņu.</p>
+                </div>
+                
+                <div class="product-features-list">
+                    <h3>Galvenās priekšrocības</h3>
+                    <ul>
+                        <li><strong>Lielāka ietilpība:</strong> 11 kg veļas ietilpība vienā ciklā ļauj efektīvi apstrādāt lielāku veļas daudzumu</li>
+                        <li><strong>Ekonomisks patēriņš:</strong> Optimizēts ūdens un elektrības patēriņš, samazinot ekspluatācijas izmaksas</li>
+                        <li><strong>Ātrums un efektivitāte:</strong> 1300 apgr./min centrifūgas ātrums nodrošina efektīvu mitruma izvadīšanu</li>
+                        <li><strong>Pielāgojamas programmas:</strong> 15 mazgāšanas programmas un iespēja tās pielāgot īpašām vajadzībām</li>
+                        <li><strong>Izturība:</strong> Nerūsējošā tērauda tvertne un rūpnieciska konstrukcija ilgam kalpošanas laikam</li>
+                        <li><strong>Viegla lietošana:</strong> Intuitīva vadība ar skaidru displeju un programmēšanas iespējām</li>
+                    </ul>
+                </div>
+                
+                <h3>Tehniskie parametri</h3>
+                <table class="specifications-table">
+                    <tr>
+                        <th>Parametrs</th>
+                        <th>Specifikācija</th>
+                    </tr>
+                    <tr>
+                        <td>Ietilpība</td>
+                        <td>11 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Centrifūgas ātrums</td>
+                        <td>1300 apgr./min.</td>
+                    </tr>
+                    <tr>
+                        <td>G-faktors</td>
+                        <td>450</td>
+                    </tr>
+                    <tr>
+                        <td>Programmu skaits</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Vadība</td>
+                        <td>Digitālais mikroprocesors</td>
+                    </tr>
+                    <tr>
+                        <td>Tvertne</td>
+                        <td>Nerūsējošais tērauds AISI 304</td>
+                    </tr>
+                    <tr>
+                        <td>Apvalks</td>
+                        <td>Nerūsējošais tērauds ar pulverkrāsojumu</td>
+                    </tr>
+                    <tr>
+                        <td>Ūdens savienojumi</td>
+                        <td>3/4" aukstam/karstam ūdenim</td>
+                    </tr>
+                    <tr>
+                        <td>Elektrības pieslēgums</td>
+                        <td>400V/3N~/50Hz</td>
+                    </tr>
+                    <tr>
+                        <td>Jauda</td>
+                        <td>6.2 kW</td>
+                    </tr>
+                    <tr>
+                        <td>Izmēri (P x D x A)</td>
+                        <td>720 x 958 x 1156 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Svars</td>
+                        <td>248 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Skaņas līmenis</td>
+                        <td>< 70 dB(A)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Contact Form Section -->
+        <div class="contact-section" id="product-contact-form">
+            <h2 class="section-title">Pieprasīt piedāvājumu</h2>
+            <p class="contact-description">Aizpildiet formu lai saņemtu detalizētu informāciju un cenu piedāvājumu par šo produktu.</p>
+            
+            <form action="mailto:miksrudolfsbondars@gmail.com" method="post" enctype="text/plain" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Vārds:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-pasts:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Tālrunis:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="hidden" id="product-name" name="product-name" value="Profesionāla veļas mašīna LA-11 TP2">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Ziņa:</label>
+                    <textarea id="message" name="message" rows="6" required>Labdien,
+
+Mani interesē Profesionāla veļas mašīna LA-11 TP2. Lūdzu, nosūtiet man informāciju par šī produkta cenu un pieejamību.
+
+Paldies!</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="Nosūtīt pieprasījumu" class="orange-button">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Main Body Ends -->
+
+    <!-- Footer Starts -->
+    <footer id="kontakti">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Par mums</h3>
+                <p class="footer-text"><span class="brand-name">Virtuve n' Veļa</span> ir jauns un enerģētisks uzņēmums ar misiju nodrošināt kvalitatīvākās iekārtas un labāko servisu mūsu klientiem. Mūsu piedāvājumā ir profesionālās veļas mašīnas, žāvētāji un gludināmie dēļi.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Kontakti</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Adrese: Tallinas iela 85, LV-1009, Rīga, Latvija
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> Tālrunis: +371 27797629
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> E-pasts: info@velasmaja.lv
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Sociālie mediji</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Virtuve n' Veļa | Visas tiesības aizsargātas</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- Add Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="veikals.js"></script>
+    <script>
+        // Image gallery functionality
+        function changeImage(src) {
+            document.getElementById('main-product-image').src = src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.product-thumbnail').forEach(thumb => {
+                if(thumb.src === src) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+        
+        // Scroll to inquiry form when request button is clicked
+        document.getElementById('product-inquiry-btn').addEventListener('click', function() {
+            document.getElementById('product-contact-form').scrollIntoView({behavior: 'smooth'});
+        });
+        
+        // Add scroll handler for kontakti link
+        document.querySelectorAll('a[href="#kontakti"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#kontakti').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Set copyright year
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const primaryNav = document.getElementById('primary-nav');
+            const catalogDropdown = document.getElementById('catalog-dropdown');
+            
+            if(mobileMenuToggle && primaryNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuToggle.classList.toggle('active');
+                    primaryNav.classList.toggle('active');
+                });
+                
+                if(catalogDropdown) {
+                    const dropdownLink = catalogDropdown.querySelector('a');
+                    if(dropdownLink) {
+                        dropdownLink.addEventListener('click', function(e) {
+                            if(window.innerWidth <= 768) {
+                                e.preventDefault();
+                                catalogDropdown.classList.toggle('active');
+                            }
+                        });
+                    }
+                }
+                
+                document.querySelectorAll('.primary_nav a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if(!this.parentElement.classList.contains('dropdown')) {
+                            primaryNav.classList.remove('active');
+                            mobileMenuToggle.classList.remove('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

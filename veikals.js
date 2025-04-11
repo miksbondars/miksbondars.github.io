@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resetTimer();
     }
     
-    // Mobile menu handling - moved from kontakti.html
+    // Enhanced Mobile Menu Toggle
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const primaryNav = document.getElementById('primary-nav');
     const catalogDropdown = document.getElementById('catalog-dropdown');
@@ -41,25 +41,26 @@ document.addEventListener('DOMContentLoaded', function() {
             primaryNav.classList.toggle('active');
         });
         
-        // Toggle dropdown on mobile
+        // Toggle dropdown on mobile without affecting desktop behavior
         if(catalogDropdown) {
             const dropdownLink = catalogDropdown.querySelector('a');
             if(dropdownLink) {
+                // Only for mobile - prevent navigation and toggle dropdown instead
                 dropdownLink.addEventListener('click', function(e) {
-                    // Only handle click specially on mobile
                     if(window.innerWidth <= 768) {
-                        e.preventDefault(); // Prevent navigation
+                        e.preventDefault(); // Prevent navigation only on mobile
                         catalogDropdown.classList.toggle('active');
                     }
+                    // On desktop, normal link behavior is preserved
                 });
             }
         }
         
-        // Close menu when a link is clicked (adding from vela.html implementation)
+        // Close menu when a link is clicked
         document.querySelectorAll('.primary_nav a').forEach(link => {
             link.addEventListener('click', function() {
                 // Only if it's not the dropdown toggle
-                if(!this.parentElement.classList.contains('dropdown')) {
+                if(!this.parentElement.classList.contains('dropdown') || window.innerWidth > 768) {
                     primaryNav.classList.remove('active');
                     mobileMenuToggle.classList.remove('active');
                 }

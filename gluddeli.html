@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Veļas Māja - Gludināmie dēļi</title>
+    <title>Virtuve n' Veļa - Gludināmie dēļi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="veikals.css">
@@ -11,7 +11,7 @@
     <header>
         <nav class="navbar" role="navigation">
             <div class="navdiv">
-                <div class="logo"><a href="veikals.html">Veļas Māja</a></div>
+                <div class="logo"><a href="veikals.html"><img src="https://lh3.googleusercontent.com/pw/AP1GczOG9amC9KS18VEbiSI3kmq3RaCJKXtMum7UFeQ-yJy0NbS0t0uwShhSjGc-Qp6Ott6J1J9mvFC7kBh7w0YAQCZ8YxdFKgN7P7pGwTjPqH5di8eTcQU=w2400" alt="Veļas Māja Logo"></a></div>
                 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -24,7 +24,7 @@
                 <ul class="primary_nav" id="primary-nav">
                     <li><a href="veikals.html">Sākums</a></li>
                     <li class="dropdown" id="catalog-dropdown">
-                        <a href="#">Katalogs</a>
+                        <a href="katalogs.html">Katalogs</a>
                         <div class="dropdown-content">
                             <a href="virtuve.html">Profesionālas virtuves iekārtas</a>
                             <a href="vela.html">Profesionālas veļas mazgāšanas iekārtas</a>
@@ -185,23 +185,43 @@
 
     <!-- Footer Starts -->
     <footer id="kontakti">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 offset-md-3 text-center">
-                    <p>Adrese: Tallinas iela 85, LV-1009, Rīga, Latvija</p>
-                    <p>Tālrunis: +371 27797629</p>
-                    <p>E-pasts: #</p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">Par mums</h3>
+                <p class="footer-text"><span class="brand-name">Virtuve n' Veļa</span> ir jauns un enerģētisks uzņēmums ar misiju nodrošināt kvalitatīvākās iekārtas un labāko servisu mūsu klientiem. Mūsu piedāvājumā ir profesionālās veļas mašīnas, žāvētāji un gludināmie dēļi.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Kontakti</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Adrese: Tallinas iela 85, LV-1009, Rīga, Latvija
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> Tālrunis: +371 27797629
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> E-pasts: info@velasmaja.lv
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; <span id="year"></span> Veļas Māja</p>
+            
+            <div class="footer-column">
+                <h3 class="footer-title">Sociālie mediji</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Virtuve n' Veļa | Visas tiesības aizsargātas</p>
             </div>
         </div>
     </footer>
     <!-- Footer Ends -->
 
+    <!-- Add Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="veikals.js"></script>
     <script>
         // Add handler for price request buttons
